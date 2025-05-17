@@ -10,7 +10,7 @@ class Team1RepositoryImpl @Inject constructor(
 ) {
     suspend fun getService(request: DummyServiceRequest): Result<DummyServiceResponse> =
         runCatching {
-            val response = service.getServiceData(request)
+            val response = service.postServiceData(request)
             response.data ?: throw Exception("No data in response")
         }
 }
