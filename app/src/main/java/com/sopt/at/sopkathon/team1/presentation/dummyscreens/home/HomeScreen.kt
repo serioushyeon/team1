@@ -41,7 +41,7 @@ fun HomeScreen(
                 )
                 .padding(vertical = 12.dp, horizontal = 20.dp)
                 .noRippleClickable {
-                    viewModel.getServiceList()
+                    viewModel.postService()
                     viewModel.updateUserId(7)
                 }
         )

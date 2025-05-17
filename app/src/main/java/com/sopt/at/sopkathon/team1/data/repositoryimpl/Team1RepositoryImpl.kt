@@ -8,7 +8,7 @@ import javax.inject.Inject
 class Team1RepositoryImpl @Inject constructor(
     private val service: Team1Service
 ) {
-    suspend fun getService(request: DummyServiceRequest): Result<DummyServiceResponse> =
+    suspend fun postService(request: DummyServiceRequest): Result<DummyServiceResponse> =
         runCatching {
             val response = service.postServiceData(request)
             response.data ?: throw Exception("No data in response")

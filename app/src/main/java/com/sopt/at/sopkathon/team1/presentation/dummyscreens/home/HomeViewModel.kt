@@ -25,9 +25,9 @@ class HomeViewModel @Inject constructor(
     fun updateUserId(id: Long) {
         _userId.value = id
     }
-    fun getServiceList(){
+    fun postService(){
         viewModelScope.launch {
-            team1RepositoryImpl.getService(
+            team1RepositoryImpl.postService(
                 DummyServiceRequest(
                     id = _userId.value
                 )
